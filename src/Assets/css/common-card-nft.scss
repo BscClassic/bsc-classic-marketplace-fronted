@@ -1,0 +1,167 @@
+.footer-card-left {
+
+}
+.footer-card-left .name-collection {
+  white-space: nowrap;
+  color: rgb(153, 153, 153);
+  font-size: 0.81rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footer-card-left .name-nft {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 0.31rem;
+  color: rgb(0, 0, 0);
+  font-size: 0.88rem;
+}
+
+.card-nft  {
+
+  &:hover {
+    .display-resource-nft {
+      transform: scale(1.1);
+    }
+
+    .blurred-background {
+      transform: scale(0.95);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)
+    }
+  }
+
+  .ant-card-body {
+    padding: 0.5rem;
+  }
+
+  .price-nft {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: linear-gradient(125.02deg, #ff0086 50%, rgba(255, 0, 134, 0) 118.17%);
+    border-radius: 0 5px 0 5px;
+    color: white !important;
+    padding: 0 0.5rem 0 0.5rem;
+    z-index: 3;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
+
+  .price-nft-usdt {
+    font-size: 0.825rem;
+    position: absolute;
+    right: 0.125rem;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    top: 1.5rem;
+    z-index: 2;
+  }
+
+  .attribs-nft {
+    @extend .price-nft;
+    right: auto;
+    left: -1px;
+    border-radius: 5px 0 5px 0;
+  }
+
+  .attribs-extra-info {
+    @extend .price-nft;
+    right: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 0 0 0;
+  }
+
+  .display-resource-nft {
+    border-radius: 2px 2px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .blurred-background {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.3s ease-in-out 0s;
+  }
+}
+
+.footer-card-right .title-price {
+  white-space: nowrap;
+  color: rgb(153, 153, 153);
+  font-size: 0.81rem;
+}
+
+.price-nft b {
+  font-size: 0.68rem;
+}
+
+.tick-and-available {
+  margin-top: 0.5rem;
+}
+
+.tick-and-available-left img {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.wrap-cover {
+  background: rgb(248, 248, 248);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.NFTResource-Wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.blurred-background, .NFTResource-Wrapper {
+  transition: opacity 0.5s ease-out;
+}
+
+.page-profile .footer-card-left {
+}
+
+.list-nft-owner .fill-width {
+  width: 100%;
+}
+
+.card-nft-content-loader {
+  opacity: 0.65;
+  img, .name-collection, .name-nft {
+    // taken from ant Skeleton
+    animation: ant-skeleton-loading 1.4s ease infinite;
+    background: linear-gradient(90deg,rgba(190,190,190,.2) 25%,rgba(129,129,129,.24) 37%,rgba(190,190,190,.2) 63%);
+    background-size: 400% 100%;
+  }
+  .footer-card-left {
+    width: 100% !important;
+    .name-collection, .name-nft {
+      border-radius: 2px;
+    }
+  }
+  .wrap-cover {
+    border-radius: 0px;
+  }
+}
+
+.ant-spin-dot-item {
+  background: linear-gradient(125.02deg, #ff0086 50%, rgba(255, 0, 134, 0) 118.17%);
+}
